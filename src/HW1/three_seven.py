@@ -20,5 +20,6 @@ ages_ans3 = 35 / 100
 print('%.2f' %ages_ans3)
 
 # 3.7(d)
+print('I prefer decimal scaling for given data. Since this kind of normalization can keep the original data distribution, and the actual meaning is more straight forward to users.')
 
 
