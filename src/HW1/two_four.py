@@ -11,7 +11,12 @@ fats = [9.5, 26.5, 7.8, 17.8, 31.4, 25.9, 27.4, 27.2, 31.2, 34.6, 42.5, 28.8, 33
 age_mean = statistics.mean(ages)
 age_median = statistics.median(ages)
 age_deviation = statistics.pstdev(ages)
-print(age_mean, age_median, age_deviation)
+print('%.2f' %age_mean, '%.2f' %age_median, '%.2f' %age_deviation)
+
+fats_mean = statistics.mean(fats)
+fats_median = statistics.median(fats)
+fats_deviation = statistics.pstdev(fats)
+print('%.2f' %fats_mean, '%.2f' %fats_median, '%.2f' %fats_deviation)
 
 #2.4(2）
 plt.boxplot(ages, patch_artist=True, labels=['ages'])

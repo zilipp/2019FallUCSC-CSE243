@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.cluster import KMeans
 
-
 prices = [5, 10, 11, 13, 15, 35, 50, 55, 72, 92, 204, 215]
 # 3.9(a)
 print('bin1: 5, 10, 11, 13')
