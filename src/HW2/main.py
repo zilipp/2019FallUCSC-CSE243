@@ -10,14 +10,15 @@ import graphviz
 oneD_arr_to_twoD_arr_func = lambda x: np.reshape(x, (len(x), -1))
 
 def loadData():
-    dataset = arff.load(open('/Users/zili/PycharmProjects/datamining/src/HW2/data/a.arff', 'r'))
+    dataset = arff.load(open('data/a.arff', 'r'))
     data = np.array(dataset['data'])
 
     # load data into 2d array
     X = oneD_arr_to_twoD_arr_func(data[:, 0]).astype(np.float)
     Y = oneD_arr_to_twoD_arr_func(data[:, 1]).astype(np.float)
+    X = np.column_stack((X, Y))
     label = oneD_arr_to_twoD_arr_func(data[:, 2]).astype(int)
-    return X, Y, label
+    return X, label
 
 
 def decision_tree(X_train, label_train, X_test):
@@ -45,7 +46,7 @@ def kNN(X_train, label_train, X_test, n_neighbors=3):
 
 
 def main():
-    X, Y, label = loadData()
+    X, label = loadData()
     # split into random training and testing data
     label = label == 1
     # label = np.invert(label)
