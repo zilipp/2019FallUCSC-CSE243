@@ -10,7 +10,7 @@ import graphviz
 oneD_arr_to_twoD_arr_func = lambda x: np.reshape(x, (len(x), -1))
 
 def loadData():
-    dataset = arff.load(open('data/a.arff', 'r'))
+    dataset = arff.load(open('data/sick.arff', 'r'))
     data = np.array(dataset['data'])
 
     # load data into 2d array
