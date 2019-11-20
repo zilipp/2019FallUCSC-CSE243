@@ -21,6 +21,7 @@ def load_data(file_path):
     df['a0003'] = pd.to_numeric(df['a0003'])
     df['a0004'] = pd.to_numeric(df['a0004'])
     df['label'] = pd.to_numeric(df['label'])
+    # feature_cols = train.columns.drop('outcome')
     return df
 
 
